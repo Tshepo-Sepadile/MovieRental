@@ -13,8 +13,11 @@ import javax.swing.JOptionPane;
  */
 public class TestClass {
     public static void main(String[]args){
-       String val = JOptionPane.showInputDialog(null, "Choose:","Choose",JOptionPane.YES_NO_OPTION);
-        System.out.println(val);
+       int a = JOptionPane.showConfirmDialog(null, "Thank you for returning the movie\n"+
+            "We hope you enjoyed it!!\n\n"+
+            "Your current balance is R"+11.20+"\nWould you like to deposit money into your account?",
+            "Movie returned", JOptionPane.YES_NO_CANCEL_OPTION);
+        System.out.println(a);
 //        String v = JOptionPane.showInputDialog(null, "Enter a, b or c: ");
 //        char val = v.toLowerCase().charAt(0);
 //        while((val != 'a') && (val != 'b') && (val != 'c')){

@@ -69,12 +69,12 @@ public class MovieRental extends javax.swing.JFrame {
         btnSearch = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         lblSearch = new javax.swing.JLabel();
-        btnReport = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        lblReport = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        btnReport = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        lblReport = new javax.swing.JLabel();
         pnlTop = new javax.swing.JPanel();
         lblExit = new javax.swing.JLabel();
         lblMinimise = new javax.swing.JLabel();
@@ -143,7 +143,35 @@ public class MovieRental extends javax.swing.JFrame {
         tblChooseMovieToRent = new javax.swing.JTable();
         btnRent = new javax.swing.JButton();
         pnlReturnDvd = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        cmbSelectRentalNumber = new javax.swing.JComboBox<>();
+        jLabel49 = new javax.swing.JLabel();
+        txtReturnCustomerName = new javax.swing.JTextField();
+        jSeparator18 = new javax.swing.JSeparator();
+        jLabel52 = new javax.swing.JLabel();
+        txtReturnCustomerSurname = new javax.swing.JTextField();
+        jSeparator21 = new javax.swing.JSeparator();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        txtReturnCustomerAvailableBalance = new javax.swing.JTextField();
+        jSeparator23 = new javax.swing.JSeparator();
+        jLabel55 = new javax.swing.JLabel();
+        txtRentedMovie = new javax.swing.JTextField();
+        jSeparator22 = new javax.swing.JSeparator();
+        jLabel56 = new javax.swing.JLabel();
+        txtRentedMovieCategory = new javax.swing.JTextField();
+        jSeparator24 = new javax.swing.JSeparator();
+        jLabel57 = new javax.swing.JLabel();
+        txtRentedReturnDate = new javax.swing.JTextField();
+        jSeparator25 = new javax.swing.JSeparator();
+        txtReturnDate = new javax.swing.JTextField();
+        jSeparator26 = new javax.swing.JSeparator();
+        jLabel58 = new javax.swing.JLabel();
+        txtReturnFee = new javax.swing.JTextField();
+        jSeparator27 = new javax.swing.JSeparator();
+        jLabel59 = new javax.swing.JLabel();
+        jLabel60 = new javax.swing.JLabel();
+        btnReturnMovie = new javax.swing.JButton();
         pnlListAllMovies = new javax.swing.JPanel();
         jScrollPane12 = new javax.swing.JScrollPane();
         tblDisplayAllMovies = new javax.swing.JTable();
@@ -184,6 +212,24 @@ public class MovieRental extends javax.swing.JFrame {
         cmbDailyRental = new javax.swing.JComboBox<>();
         jScrollPane10 = new javax.swing.JScrollPane();
         tblDisplayAllRental2 = new javax.swing.JTable();
+        pnlUpdateCustomerCredit = new javax.swing.JPanel();
+        jSeparator33 = new javax.swing.JSeparator();
+        txtUpdateCredit = new javax.swing.JTextField();
+        txtUpdatePhoneNumber = new javax.swing.JTextField();
+        jLabel70 = new javax.swing.JLabel();
+        jSeparator34 = new javax.swing.JSeparator();
+        btnUpdateCustomerCredit = new javax.swing.JButton();
+        jSeparator35 = new javax.swing.JSeparator();
+        txtUpdateCustomerNumber = new javax.swing.JTextField();
+        jLabel71 = new javax.swing.JLabel();
+        jSeparator36 = new javax.swing.JSeparator();
+        jLabel72 = new javax.swing.JLabel();
+        txtUpdateSurname = new javax.swing.JTextField();
+        jLabel73 = new javax.swing.JLabel();
+        jSeparator37 = new javax.swing.JSeparator();
+        jLabel74 = new javax.swing.JLabel();
+        txtUpdateName = new javax.swing.JTextField();
+        jLabel75 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Movie rental");
@@ -402,7 +448,7 @@ public class MovieRental extends javax.swing.JFrame {
                 .addGap(9, 9, 9)
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
-                .addComponent(lblListAllCustomers, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblListAllCustomers, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
                 .addContainerGap())
         );
         btnListAllCustomersLayout.setVerticalGroup(
@@ -450,42 +496,6 @@ public class MovieRental extends javax.swing.JFrame {
 
         pnlLeftMenu.add(btnSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 440, 230, -1));
 
-        btnReport.setBackground(new java.awt.Color(101, 148, 254));
-        btnReport.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnReportMouseClicked(evt);
-            }
-        });
-
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Rent_32px.png"))); // NOI18N
-
-        lblReport.setBackground(new java.awt.Color(255, 255, 255));
-        lblReport.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
-        lblReport.setForeground(new java.awt.Color(255, 255, 255));
-        lblReport.setText("REPORT");
-
-        javax.swing.GroupLayout btnReportLayout = new javax.swing.GroupLayout(btnReport);
-        btnReport.setLayout(btnReportLayout);
-        btnReportLayout.setHorizontalGroup(
-            btnReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnReportLayout.createSequentialGroup()
-                .addGap(9, 9, 9)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(lblReport, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        btnReportLayout.setVerticalGroup(
-            btnReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(lblReport, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        pnlLeftMenu.add(btnReport, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 230, 40));
-
         jLabel2.setFont(new java.awt.Font("Cooper Black", 1, 30)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 0));
         jLabel2.setText("spot");
@@ -498,6 +508,42 @@ public class MovieRental extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 0));
         jLabel3.setText("Movie rental");
         pnlLeftMenu.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 30));
+
+        btnReport.setBackground(new java.awt.Color(101, 148, 254));
+        btnReport.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnReportMouseClicked(evt);
+            }
+        });
+
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Rent_32px.png"))); // NOI18N
+
+        lblReport.setBackground(new java.awt.Color(255, 255, 255));
+        lblReport.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
+        lblReport.setForeground(new java.awt.Color(255, 255, 255));
+        lblReport.setText("REPORT");
+
+        javax.swing.GroupLayout btnReportLayout = new javax.swing.GroupLayout(btnReport);
+        btnReport.setLayout(btnReportLayout);
+        btnReportLayout.setHorizontalGroup(
+            btnReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnReportLayout.createSequentialGroup()
+                .addGap(9, 9, 9)
+                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(lblReport, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        btnReportLayout.setVerticalGroup(
+            btnReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblReport, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        pnlLeftMenu.add(btnReport, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 230, -1));
 
         pnlBottom.add(pnlLeftMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 600));
 
@@ -624,7 +670,6 @@ public class MovieRental extends javax.swing.JFrame {
         jLabel35.setForeground(new java.awt.Color(0, 102, 102));
         jLabel35.setText("Can rent");
 
-        txtSurname.setEditable(false);
         txtSurname.setBackground(new java.awt.Color(204, 255, 255));
         txtSurname.setFont(new java.awt.Font("Cooper Black", 0, 16)); // NOI18N
         txtSurname.setForeground(new java.awt.Color(46, 110, 254));
@@ -635,7 +680,6 @@ public class MovieRental extends javax.swing.JFrame {
             }
         });
 
-        txtName.setEditable(false);
         txtName.setBackground(new java.awt.Color(204, 255, 255));
         txtName.setFont(new java.awt.Font("Cooper Black", 0, 16)); // NOI18N
         txtName.setForeground(new java.awt.Color(46, 110, 254));
@@ -646,7 +690,6 @@ public class MovieRental extends javax.swing.JFrame {
             }
         });
 
-        txtPhoneNumber.setEditable(false);
         txtPhoneNumber.setBackground(new java.awt.Color(204, 255, 255));
         txtPhoneNumber.setFont(new java.awt.Font("Cooper Black", 0, 16)); // NOI18N
         txtPhoneNumber.setForeground(new java.awt.Color(46, 110, 254));
@@ -759,7 +802,6 @@ public class MovieRental extends javax.swing.JFrame {
 
         pnlAddNewDvd.setBackground(new java.awt.Color(204, 255, 255));
 
-        txtTitle.setEditable(false);
         txtTitle.setBackground(new java.awt.Color(204, 255, 255));
         txtTitle.setFont(new java.awt.Font("Cooper Black", 0, 16)); // NOI18N
         txtTitle.setForeground(new java.awt.Color(46, 110, 254));
@@ -1091,14 +1133,10 @@ public class MovieRental extends javax.swing.JFrame {
                         .addGap(229, 229, 229))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jSeparator8)
-                                    .addComponent(txtCustomerName, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(jLabel38)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jSeparator8)
+                                .addComponent(txtCustomerName, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel38))
                         .addGap(12, 12, 12)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -1260,25 +1298,306 @@ public class MovieRental extends javax.swing.JFrame {
         pnlBottom.add(pnlRentDvd, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 800, 400));
 
         pnlReturnDvd.setBackground(new java.awt.Color(204, 255, 255));
+        pnlReturnDvd.setPreferredSize(new java.awt.Dimension(800, 400));
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel9.setText("Return DVD");
+        jLabel48.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel48.setText("Select rental number");
+
+        cmbSelectRentalNumber.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        cmbSelectRentalNumber.setBorder(null);
+        cmbSelectRentalNumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbSelectRentalNumberActionPerformed(evt);
+            }
+        });
+
+        jLabel49.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel49.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel49.setText("Name");
+
+        txtReturnCustomerName.setEditable(false);
+        txtReturnCustomerName.setBackground(new java.awt.Color(204, 255, 255));
+        txtReturnCustomerName.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtReturnCustomerName.setForeground(new java.awt.Color(46, 110, 254));
+        txtReturnCustomerName.setBorder(null);
+        txtReturnCustomerName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtReturnCustomerNameActionPerformed(evt);
+            }
+        });
+
+        jLabel52.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel52.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel52.setText("Surname");
+
+        txtReturnCustomerSurname.setEditable(false);
+        txtReturnCustomerSurname.setBackground(new java.awt.Color(204, 255, 255));
+        txtReturnCustomerSurname.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtReturnCustomerSurname.setForeground(new java.awt.Color(46, 110, 254));
+        txtReturnCustomerSurname.setBorder(null);
+        txtReturnCustomerSurname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtReturnCustomerSurnameActionPerformed(evt);
+            }
+        });
+
+        jLabel53.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel53.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel53.setText("Available balance");
+
+        jLabel54.setFont(new java.awt.Font("Cooper Black", 0, 18)); // NOI18N
+        jLabel54.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel54.setText("R");
+
+        txtReturnCustomerAvailableBalance.setEditable(false);
+        txtReturnCustomerAvailableBalance.setBackground(new java.awt.Color(204, 255, 255));
+        txtReturnCustomerAvailableBalance.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtReturnCustomerAvailableBalance.setForeground(new java.awt.Color(46, 110, 254));
+        txtReturnCustomerAvailableBalance.setBorder(null);
+        txtReturnCustomerAvailableBalance.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtReturnCustomerAvailableBalanceActionPerformed(evt);
+            }
+        });
+
+        jLabel55.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel55.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel55.setText("Rented movie");
+
+        txtRentedMovie.setEditable(false);
+        txtRentedMovie.setBackground(new java.awt.Color(204, 255, 255));
+        txtRentedMovie.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtRentedMovie.setForeground(new java.awt.Color(46, 110, 254));
+        txtRentedMovie.setBorder(null);
+        txtRentedMovie.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRentedMovieActionPerformed(evt);
+            }
+        });
+
+        jLabel56.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel56.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel56.setText("Category");
+
+        txtRentedMovieCategory.setEditable(false);
+        txtRentedMovieCategory.setBackground(new java.awt.Color(204, 255, 255));
+        txtRentedMovieCategory.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtRentedMovieCategory.setForeground(new java.awt.Color(46, 110, 254));
+        txtRentedMovieCategory.setBorder(null);
+        txtRentedMovieCategory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRentedMovieCategoryActionPerformed(evt);
+            }
+        });
+
+        jLabel57.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel57.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel57.setText("Rented date");
+
+        txtRentedReturnDate.setEditable(false);
+        txtRentedReturnDate.setBackground(new java.awt.Color(204, 255, 255));
+        txtRentedReturnDate.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtRentedReturnDate.setForeground(new java.awt.Color(46, 110, 254));
+        txtRentedReturnDate.setBorder(null);
+        txtRentedReturnDate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRentedReturnDateActionPerformed(evt);
+            }
+        });
+
+        txtReturnDate.setEditable(false);
+        txtReturnDate.setBackground(new java.awt.Color(204, 255, 255));
+        txtReturnDate.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtReturnDate.setForeground(new java.awt.Color(46, 110, 254));
+        txtReturnDate.setBorder(null);
+        txtReturnDate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtReturnDateActionPerformed(evt);
+            }
+        });
+
+        jLabel58.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel58.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel58.setText("Return date");
+
+        txtReturnFee.setEditable(false);
+        txtReturnFee.setBackground(new java.awt.Color(204, 255, 255));
+        txtReturnFee.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        txtReturnFee.setForeground(new java.awt.Color(46, 110, 254));
+        txtReturnFee.setBorder(null);
+        txtReturnFee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtReturnFeeActionPerformed(evt);
+            }
+        });
+
+        jLabel59.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel59.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel59.setText("Total payment");
+
+        jLabel60.setFont(new java.awt.Font("Cooper Black", 0, 18)); // NOI18N
+        jLabel60.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel60.setText("R");
+
+        btnReturnMovie.setFont(new java.awt.Font("Cooper Black", 0, 36)); // NOI18N
+        btnReturnMovie.setForeground(new java.awt.Color(0, 102, 102));
+        btnReturnMovie.setText("Return movie");
+        btnReturnMovie.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnReturnMovie.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReturnMovieActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlReturnDvdLayout = new javax.swing.GroupLayout(pnlReturnDvd);
         pnlReturnDvd.setLayout(pnlReturnDvdLayout);
         pnlReturnDvdLayout.setHorizontalGroup(
             pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlReturnDvdLayout.createSequentialGroup()
-                .addGap(276, 276, 276)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(301, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlReturnDvdLayout.createSequentialGroup()
+                        .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnlReturnDvdLayout.createSequentialGroup()
+                                .addComponent(jLabel48)
+                                .addGap(38, 38, 38)
+                                .addComponent(cmbSelectRentalNumber, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(pnlReturnDvdLayout.createSequentialGroup()
+                                .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jSeparator18)
+                                        .addComponent(txtReturnCustomerName, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel49)
+                                    .addComponent(txtRentedMovie, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel58)
+                                    .addComponent(txtReturnCustomerSurname)
+                                    .addComponent(jSeparator21, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
+                                    .addComponent(jLabel52)
+                                    .addComponent(jLabel56)
+                                    .addComponent(txtRentedMovieCategory)
+                                    .addComponent(jSeparator24)
+                                    .addComponent(txtReturnDate)
+                                    .addComponent(jSeparator26))))
+                        .addGap(54, 54, 54)
+                        .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel53)
+                            .addGroup(pnlReturnDvdLayout.createSequentialGroup()
+                                .addComponent(jLabel54)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtReturnCustomerAvailableBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(21, 21, 21))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlReturnDvdLayout.createSequentialGroup()
+                        .addGap(0, 10, Short.MAX_VALUE)
+                        .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlReturnDvdLayout.createSequentialGroup()
+                                .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnlReturnDvdLayout.createSequentialGroup()
+                                        .addComponent(jLabel55)
+                                        .addGap(519, 519, 519))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlReturnDvdLayout.createSequentialGroup()
+                                        .addComponent(jSeparator22, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(366, 366, 366)))
+                                .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(pnlReturnDvdLayout.createSequentialGroup()
+                                        .addComponent(jLabel59)
+                                        .addGap(120, 120, 120))
+                                    .addGroup(pnlReturnDvdLayout.createSequentialGroup()
+                                        .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jSeparator23, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addComponent(jSeparator27, javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(pnlReturnDvdLayout.createSequentialGroup()
+                                                    .addComponent(jLabel60)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                    .addComponent(txtReturnFee, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addGap(21, 21, 21))))
+                            .addComponent(jLabel57)
+                            .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jSeparator25, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
+                                .addComponent(txtRentedReturnDate, javax.swing.GroupLayout.Alignment.LEADING)))))
+                .addContainerGap())
+            .addGroup(pnlReturnDvdLayout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(btnReturnMovie, javax.swing.GroupLayout.PREFERRED_SIZE, 723, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlReturnDvdLayout.setVerticalGroup(
             pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlReturnDvdLayout.createSequentialGroup()
-                .addGap(153, 153, 153)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(199, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cmbSelectRentalNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel48))
+                .addGap(18, 18, 18)
+                .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(pnlReturnDvdLayout.createSequentialGroup()
+                            .addComponent(jLabel49)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(txtReturnCustomerName, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(1, 1, 1)
+                            .addComponent(jSeparator18, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(pnlReturnDvdLayout.createSequentialGroup()
+                            .addComponent(jLabel53)
+                            .addGap(11, 11, 11)
+                            .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtReturnCustomerAvailableBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel54))
+                            .addGap(1, 1, 1)
+                            .addComponent(jSeparator23, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(pnlReturnDvdLayout.createSequentialGroup()
+                        .addComponent(jLabel52)
+                        .addGap(11, 11, 11)
+                        .addComponent(txtReturnCustomerSurname, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1)
+                        .addComponent(jSeparator21, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlReturnDvdLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel59)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel60))
+                    .addGroup(pnlReturnDvdLayout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnlReturnDvdLayout.createSequentialGroup()
+                                .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel55)
+                                    .addComponent(jLabel56))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnlReturnDvdLayout.createSequentialGroup()
+                                        .addComponent(txtRentedMovie, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(1, 1, 1)
+                                        .addComponent(jSeparator22, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(pnlReturnDvdLayout.createSequentialGroup()
+                                        .addComponent(txtRentedMovieCategory, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(1, 1, 1)
+                                        .addComponent(jSeparator24, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(pnlReturnDvdLayout.createSequentialGroup()
+                                .addComponent(txtReturnFee, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(1, 1, 1)
+                                .addComponent(jSeparator27, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(18, 18, 18)
+                .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel58, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel57, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(11, 11, 11)
+                .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnlReturnDvdLayout.createSequentialGroup()
+                        .addComponent(txtReturnDate, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1)
+                        .addComponent(jSeparator26, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlReturnDvdLayout.createSequentialGroup()
+                        .addComponent(txtRentedReturnDate, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1)
+                        .addComponent(jSeparator25, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addComponent(btnReturnMovie, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pnlBottom.add(pnlReturnDvd, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 800, 400));
@@ -1811,6 +2130,194 @@ public class MovieRental extends javax.swing.JFrame {
 
         pnlBottom.add(pnlReport, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 800, 400));
 
+        pnlUpdateCustomerCredit.setBackground(new java.awt.Color(204, 255, 255));
+
+        txtUpdateCredit.setBackground(new java.awt.Color(204, 255, 255));
+        txtUpdateCredit.setFont(new java.awt.Font("Cooper Black", 0, 16)); // NOI18N
+        txtUpdateCredit.setForeground(new java.awt.Color(46, 110, 254));
+        txtUpdateCredit.setBorder(null);
+        txtUpdateCredit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUpdateCreditActionPerformed(evt);
+            }
+        });
+
+        txtUpdatePhoneNumber.setEditable(false);
+        txtUpdatePhoneNumber.setBackground(new java.awt.Color(204, 255, 255));
+        txtUpdatePhoneNumber.setFont(new java.awt.Font("Cooper Black", 0, 16)); // NOI18N
+        txtUpdatePhoneNumber.setForeground(new java.awt.Color(46, 110, 254));
+        txtUpdatePhoneNumber.setBorder(null);
+        txtUpdatePhoneNumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUpdatePhoneNumberActionPerformed(evt);
+            }
+        });
+
+        jLabel70.setFont(new java.awt.Font("Cooper Black", 0, 18)); // NOI18N
+        jLabel70.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel70.setText("R");
+
+        btnUpdateCustomerCredit.setFont(new java.awt.Font("Cooper Black", 0, 36)); // NOI18N
+        btnUpdateCustomerCredit.setForeground(new java.awt.Color(0, 102, 102));
+        btnUpdateCustomerCredit.setText("Update customer");
+        btnUpdateCustomerCredit.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnUpdateCustomerCredit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateCustomerCreditActionPerformed(evt);
+            }
+        });
+
+        txtUpdateCustomerNumber.setEditable(false);
+        txtUpdateCustomerNumber.setBackground(new java.awt.Color(204, 255, 255));
+        txtUpdateCustomerNumber.setFont(new java.awt.Font("Cooper Black", 0, 16)); // NOI18N
+        txtUpdateCustomerNumber.setForeground(new java.awt.Color(46, 110, 254));
+        txtUpdateCustomerNumber.setBorder(null);
+        txtUpdateCustomerNumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUpdateCustomerNumberActionPerformed(evt);
+            }
+        });
+
+        jLabel71.setFont(new java.awt.Font("Cooper Black", 0, 18)); // NOI18N
+        jLabel71.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel71.setText("Customer number");
+
+        jLabel72.setFont(new java.awt.Font("Cooper Black", 0, 18)); // NOI18N
+        jLabel72.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel72.setText("Name");
+
+        txtUpdateSurname.setEditable(false);
+        txtUpdateSurname.setBackground(new java.awt.Color(204, 255, 255));
+        txtUpdateSurname.setFont(new java.awt.Font("Cooper Black", 0, 16)); // NOI18N
+        txtUpdateSurname.setForeground(new java.awt.Color(46, 110, 254));
+        txtUpdateSurname.setBorder(null);
+        txtUpdateSurname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUpdateSurnameActionPerformed(evt);
+            }
+        });
+
+        jLabel73.setFont(new java.awt.Font("Cooper Black", 0, 18)); // NOI18N
+        jLabel73.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel73.setText("Surname");
+
+        jLabel74.setFont(new java.awt.Font("Cooper Black", 0, 18)); // NOI18N
+        jLabel74.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel74.setText("Phone number");
+
+        txtUpdateName.setEditable(false);
+        txtUpdateName.setBackground(new java.awt.Color(204, 255, 255));
+        txtUpdateName.setFont(new java.awt.Font("Cooper Black", 0, 16)); // NOI18N
+        txtUpdateName.setForeground(new java.awt.Color(46, 110, 254));
+        txtUpdateName.setBorder(null);
+        txtUpdateName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUpdateNameActionPerformed(evt);
+            }
+        });
+
+        jLabel75.setFont(new java.awt.Font("Cooper Black", 0, 18)); // NOI18N
+        jLabel75.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel75.setText("Credit");
+
+        javax.swing.GroupLayout pnlUpdateCustomerCreditLayout = new javax.swing.GroupLayout(pnlUpdateCustomerCredit);
+        pnlUpdateCustomerCredit.setLayout(pnlUpdateCustomerCreditLayout);
+        pnlUpdateCustomerCreditLayout.setHorizontalGroup(
+            pnlUpdateCustomerCreditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlUpdateCustomerCreditLayout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addGroup(pnlUpdateCustomerCreditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlUpdateCustomerCreditLayout.createSequentialGroup()
+                        .addGroup(pnlUpdateCustomerCreditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel72)
+                            .addGroup(pnlUpdateCustomerCreditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(txtUpdateName, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE)
+                                .addComponent(jSeparator33, javax.swing.GroupLayout.Alignment.LEADING)))
+                        .addGap(115, 115, 115)
+                        .addGroup(pnlUpdateCustomerCreditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtUpdateSurname)
+                            .addComponent(jSeparator37)
+                            .addGroup(pnlUpdateCustomerCreditLayout.createSequentialGroup()
+                                .addComponent(jLabel73)
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addComponent(btnUpdateCustomerCredit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(pnlUpdateCustomerCreditLayout.createSequentialGroup()
+                        .addGroup(pnlUpdateCustomerCreditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel74)
+                            .addGroup(pnlUpdateCustomerCreditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(txtUpdatePhoneNumber, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jSeparator34, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(115, 115, 115)
+                        .addGroup(pnlUpdateCustomerCreditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator36)
+                            .addGroup(pnlUpdateCustomerCreditLayout.createSequentialGroup()
+                                .addGroup(pnlUpdateCustomerCreditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel75)
+                                    .addGroup(pnlUpdateCustomerCreditLayout.createSequentialGroup()
+                                        .addComponent(jLabel70)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(txtUpdateCredit, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addGap(29, 29, 29))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlUpdateCustomerCreditLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnlUpdateCustomerCreditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(txtUpdateCustomerNumber, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
+                    .addComponent(jSeparator35))
+                .addGap(216, 216, 216))
+            .addGroup(pnlUpdateCustomerCreditLayout.createSequentialGroup()
+                .addGap(317, 317, 317)
+                .addComponent(jLabel71)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pnlUpdateCustomerCreditLayout.setVerticalGroup(
+            pnlUpdateCustomerCreditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlUpdateCustomerCreditLayout.createSequentialGroup()
+                .addGroup(pnlUpdateCustomerCreditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlUpdateCustomerCreditLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel73)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtUpdateSurname, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1)
+                        .addComponent(jSeparator37, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlUpdateCustomerCreditLayout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel72)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtUpdateName, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1)
+                        .addComponent(jSeparator33, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(pnlUpdateCustomerCreditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlUpdateCustomerCreditLayout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel75)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnlUpdateCustomerCreditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel70)
+                            .addComponent(txtUpdateCredit, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator36, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlUpdateCustomerCreditLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel74)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtUpdatePhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1)
+                        .addComponent(jSeparator34, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(23, 23, 23)
+                .addComponent(jLabel71)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtUpdateCustomerNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator35, javax.swing.GroupLayout.PREFERRED_SIZE, 5, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnUpdateCustomerCredit, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
+        );
+
+        pnlBottom.add(pnlUpdateCustomerCredit, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 800, 400));
+
         javax.swing.GroupLayout pnlMainPanelLayout = new javax.swing.GroupLayout(pnlMainPanel);
         pnlMainPanel.setLayout(pnlMainPanelLayout);
         pnlMainPanelLayout.setHorizontalGroup(
@@ -1857,7 +2364,9 @@ public class MovieRental extends javax.swing.JFrame {
         resetColor(btnListAllCustomers, lblListAllCustomers);        
         resetColor(btnReport, lblReport);
         resetColor(btnSearch, lblSearch);
+        //resetColor(btnUpdateCredit, lblUpdateCredit);
         
+        pnlUpdateCustomerCredit.setVisible(false);
         pnlAddNewCustomer.setVisible(true);
         pnlAddNewDvd.setVisible(false);
         pnlRentDvd.setVisible(false);
@@ -1878,7 +2387,9 @@ public class MovieRental extends javax.swing.JFrame {
         resetColor(btnListAllCustomers, lblListAllCustomers);        
         resetColor(btnReport, lblReport);
         resetColor(btnSearch, lblSearch);
+        //resetColor(btnUpdateCredit, lblUpdateCredit);
         
+        pnlUpdateCustomerCredit.setVisible(false);
         pnlAddNewCustomer.setVisible(false);
         pnlAddNewDvd.setVisible(true);
         pnlRentDvd.setVisible(false);
@@ -1899,7 +2410,9 @@ public class MovieRental extends javax.swing.JFrame {
         resetColor(btnListAllCustomers, lblListAllCustomers);        
         resetColor(btnReport, lblReport);
         resetColor(btnSearch, lblSearch);
+        //resetColor(btnUpdateCredit, lblUpdateCredit);
         
+        pnlUpdateCustomerCredit.setVisible(false);
         pnlAddNewCustomer.setVisible(false);
         pnlAddNewDvd.setVisible(false);
         pnlRentDvd.setVisible(true);
@@ -1920,7 +2433,9 @@ public class MovieRental extends javax.swing.JFrame {
         resetColor(btnListAllCustomers, lblListAllCustomers);        
         resetColor(btnReport, lblReport);
         resetColor(btnSearch, lblSearch);
+        //resetColor(btnUpdateCredit, lblUpdateCredit);
         
+        pnlUpdateCustomerCredit.setVisible(false);
         pnlAddNewCustomer.setVisible(false);
         pnlAddNewDvd.setVisible(false);
         pnlRentDvd.setVisible(false);
@@ -1941,7 +2456,9 @@ public class MovieRental extends javax.swing.JFrame {
         resetColor(btnListAllCustomers, lblListAllCustomers);        
         resetColor(btnReport, lblReport);
         resetColor(btnSearch, lblSearch);
+        //resetColor(btnUpdateCredit, lblUpdateCredit);
         
+        pnlUpdateCustomerCredit.setVisible(false);
         pnlAddNewCustomer.setVisible(false);
         pnlAddNewDvd.setVisible(false);
         pnlRentDvd.setVisible(false);
@@ -1962,7 +2479,9 @@ public class MovieRental extends javax.swing.JFrame {
         setColor(btnListAllCustomers, lblListAllCustomers);        
         resetColor(btnReport, lblReport);
         resetColor(btnSearch, lblSearch);
+        //resetColor(btnUpdateCredit, lblUpdateCredit);
         
+        pnlUpdateCustomerCredit.setVisible(false);
         pnlAddNewCustomer.setVisible(false);
         pnlAddNewDvd.setVisible(false);
         pnlRentDvd.setVisible(false);
@@ -1983,7 +2502,9 @@ public class MovieRental extends javax.swing.JFrame {
         resetColor(btnListAllCustomers, lblListAllCustomers);        
         resetColor(btnReport, lblReport);
         setColor(btnSearch, lblSearch);
+        //resetColor(btnUpdateCredit, lblUpdateCredit);
         
+        pnlUpdateCustomerCredit.setVisible(false);
         pnlAddNewCustomer.setVisible(false);
         pnlAddNewDvd.setVisible(false);
         pnlRentDvd.setVisible(false);
@@ -1993,27 +2514,6 @@ public class MovieRental extends javax.swing.JFrame {
         pnlReport.setVisible(false);
         pnlSearch.setVisible(true);
     }//GEN-LAST:event_btnSearchMouseClicked
-
-    private void btnReportMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReportMouseClicked
-        // TODO add your handling code here:
-        resetColor(btnAddNewCustomer, lblAddNewCustomer);
-        resetColor(btnAddNewDvd, lblAddNewDvd);
-        resetColor(btnRentDvd, lblRentDvd);
-        resetColor(btnReturnDvd, lblReturnDvd);
-        resetColor(btnListAllMovies, lblListAllMovies);        
-        resetColor(btnListAllCustomers, lblListAllCustomers);        
-        setColor(btnReport, lblReport);
-        resetColor(btnSearch, lblSearch);
-        
-        pnlAddNewCustomer.setVisible(false);
-        pnlAddNewDvd.setVisible(false);
-        pnlRentDvd.setVisible(false);
-        pnlReturnDvd.setVisible(false);
-        pnlListAllMovies.setVisible(false);
-        pnlListAllCustomers.setVisible(false);
-        pnlReport.setVisible(true);
-        pnlSearch.setVisible(false);
-    }//GEN-LAST:event_btnReportMouseClicked
 
     private void txtTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTitleActionPerformed
         // TODO add your handling code here:
@@ -2164,25 +2664,182 @@ public class MovieRental extends javax.swing.JFrame {
 //        }
 //        
 //        if(/*insufficient funds*/){
-//            String value = JOptionPane.showInputDialog(rootPane, 
+//            int value = JOptionPane.showConfirmDialog(rootPane, 
 //                    "SORRY!\nYou have insufficient funds to rent.\n"+
-//                    "Enter option below\n\n"+
-//                    "Cancel rent -> C\nLoad credit -> L\nPay fee", "Insufficient funds", JOptionPane.INFORMATION_MESSAGE);
-//            char option = value.toLowerCase().charAt(0);
-//            while((option != 'c') && (option != 'l') && (option != 'p')){
-//                String value = JOptionPane.showInputDialog(rootPane, 
-//                        "ERROR!\nPlease choose within the provided options.\n"+
-//                        "Cancel rent -> C\nLoad credit -> L\nPay fee", "Insufficient funds", JOptionPane.ERROR_MESSAGE);
-//                option = value.toLowerCase().charAt(0);                
+//                    "Click \"YES\" to load credit/Pay fee\nClick \"NO\" to cancel rental", "Insufficient funds", JOptionPane.YES_NO_OPTION);
+//            switch(value){
+//                case 0: 
+//                    resetColor(btnAddNewCustomer, lblAddNewCustomer);
+//                    resetColor(btnAddNewDvd, lblAddNewDvd);
+//                    resetColor(btnRentDvd, lblRentDvd);
+//                    resetColor(btnReturnDvd, lblReturnDvd);
+//                    resetColor(btnListAllMovies, lblListAllMovies);
+//                    resetColor(btnListAllCustomers, lblListAllCustomers);
+//                    resetColor(btnReport, lblReport);
+//                    resetColor(btnSearch, lblSearch);
+//                    //resetColor(btnUpdateCredit, lblUpdateCredit);
+//
+//                    pnlAddNewCustomer.setVisible(false);
+//                    pnlAddNewDvd.setVisible(false);
+//                    pnlRentDvd.setVisible(false);
+//                    pnlReturnDvd.setVisible(false);
+//                    pnlListAllMovies.setVisible(false);
+//                    pnlListAllCustomers.setVisible(false);
+//                    pnlReport.setVisible(false);
+//                    pnlSearch.setVisible(false);
+//                    pnlUpdateCustomerCredit.setVisible(true);
+//                    break;
+//                case 1: JOptionPane.showMessageDialog(rootPane, "Thank\nYour rental have been cancelled",
+//                        "Cancel rental", JOptionPane.INFORMATION_MESSAGE);
 //            }
 //        }
 //        
 //        if(/*Unsuccessful rent*/){
-//            JOptionPane.showInputDialog(rootPane, 
-//                        "ERROR!\nPlease choose within the provided options.\n"+
-//                        "Cancel rent -> C\nLoad credit -> L\nPay fee", "Insufficient funds", JOptionPane.ERROR_MESSAGE);
+//            int opt = JOptionPane.showConfirmDialog(rootPane, 
+//                    "SORRY!\nYou cannot rent any movie.\nYou have a pending movie"+
+//                    "Click \"YES\" to return movie\nClick \"NO\" to cancel rental", "Pending movie", JOptionPane.YES_NO_OPTION);
+//            switch(opt){
+//                case 0: 
+//                    resetColor(btnAddNewCustomer, lblAddNewCustomer);
+//                    resetColor(btnAddNewDvd, lblAddNewDvd);
+//                    resetColor(btnRentDvd, lblRentDvd);
+//                    setColor(btnReturnDvd, lblReturnDvd);
+//                    resetColor(btnListAllMovies, lblListAllMovies);
+//                    resetColor(btnListAllCustomers, lblListAllCustomers);
+//                    resetColor(btnReport, lblReport);
+//                    resetColor(btnSearch, lblSearch);
+//                    //resetColor(btnUpdateCredit, lblUpdateCredit);
+//
+//                    pnlAddNewCustomer.setVisible(false);
+//                    pnlAddNewDvd.setVisible(false);
+//                    pnlRentDvd.setVisible(false);
+//                    pnlReturnDvd.setVisible(true);
+//                    pnlListAllMovies.setVisible(false);
+//                    pnlListAllCustomers.setVisible(false);
+//                    pnlReport.setVisible(false);
+//                    pnlSearch.setVisible(false);
+//                    pnlUpdateCustomerCredit.setVisible(false);
+//                    break;
+//                case 1: JOptionPane.showMessageDialog(rootPane, "Thank\nYour rental have been cancelled",
+//                        "Cancel rental", JOptionPane.INFORMATION_MESSAGE);
+//            }
 //        }
     }//GEN-LAST:event_btnRentActionPerformed
+
+    private void txtReturnCustomerSurnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReturnCustomerSurnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtReturnCustomerSurnameActionPerformed
+
+    private void txtReturnCustomerNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReturnCustomerNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtReturnCustomerNameActionPerformed
+
+    private void cmbSelectRentalNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbSelectRentalNumberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbSelectRentalNumberActionPerformed
+
+    private void txtReturnCustomerAvailableBalanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReturnCustomerAvailableBalanceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtReturnCustomerAvailableBalanceActionPerformed
+
+    private void txtRentedMovieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRentedMovieActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtRentedMovieActionPerformed
+
+    private void txtRentedMovieCategoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRentedMovieCategoryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtRentedMovieCategoryActionPerformed
+
+    private void txtRentedReturnDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRentedReturnDateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtRentedReturnDateActionPerformed
+
+    private void txtReturnDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReturnDateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtReturnDateActionPerformed
+
+    private void txtReturnFeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReturnFeeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtReturnFeeActionPerformed
+
+    private void btnReturnMovieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnMovieActionPerformed
+        // TODO add your handling code here:
+        int option = JOptionPane.showConfirmDialog(null, "Thank you for returning the movie\n"+
+            "We hope you enjoyed it!!\n\n"+
+            "Your current balance is R"+txtReturnCustomerAvailableBalance.getText()+"\nWould you like to deposit money into your account?",
+            "Movie returned", JOptionPane.YES_NO_OPTION);
+        switch(option){
+            case 0: 
+                resetColor(btnAddNewCustomer, lblAddNewCustomer);
+                resetColor(btnAddNewDvd, lblAddNewDvd);
+                resetColor(btnRentDvd, lblRentDvd);
+                resetColor(btnReturnDvd, lblReturnDvd);
+                resetColor(btnListAllMovies, lblListAllMovies);
+                resetColor(btnListAllCustomers, lblListAllCustomers);
+                resetColor(btnReport, lblReport);
+                resetColor(btnSearch, lblSearch);
+                //resetColor(btnUpdateCredit, lblUpdateCredit);
+
+                pnlAddNewCustomer.setVisible(false);
+                pnlAddNewDvd.setVisible(false);
+                pnlRentDvd.setVisible(false);
+                pnlReturnDvd.setVisible(false);
+                pnlListAllMovies.setVisible(false);
+                pnlListAllCustomers.setVisible(false);
+                pnlReport.setVisible(false);
+                pnlSearch.setVisible(false);
+                pnlUpdateCustomerCredit.setVisible(true);
+                break;
+            case 1: JOptionPane.showMessageDialog(rootPane, "Good Bye!","Thank you",JOptionPane.INFORMATION_MESSAGE);break;
+        }
+    }//GEN-LAST:event_btnReturnMovieActionPerformed
+
+    private void btnReportMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReportMouseClicked
+        // TODO add your handling code here:
+        resetColor(btnAddNewCustomer, lblAddNewCustomer);
+        resetColor(btnAddNewDvd, lblAddNewDvd);
+        resetColor(btnRentDvd, lblRentDvd);
+        resetColor(btnReturnDvd, lblReturnDvd);
+        resetColor(btnListAllMovies, lblListAllMovies);        
+        resetColor(btnListAllCustomers, lblListAllCustomers);        
+        resetColor(btnSearch, lblSearch);
+        setColor(btnReport, lblReport);
+        //resetColor(btnUpdateCredit, lblUpdateCredit);
+        
+        pnlAddNewCustomer.setVisible(false);
+        pnlAddNewDvd.setVisible(false);
+        pnlRentDvd.setVisible(false);
+        pnlReturnDvd.setVisible(false);
+        pnlListAllMovies.setVisible(false);
+        pnlListAllCustomers.setVisible(false);
+        pnlSearch.setVisible(false);
+        pnlReport.setVisible(true);
+        pnlUpdateCustomerCredit.setVisible(false);
+    }//GEN-LAST:event_btnReportMouseClicked
+
+    private void txtUpdateCreditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUpdateCreditActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUpdateCreditActionPerformed
+
+    private void txtUpdatePhoneNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUpdatePhoneNumberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUpdatePhoneNumberActionPerformed
+
+    private void btnUpdateCustomerCreditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateCustomerCreditActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpdateCustomerCreditActionPerformed
+
+    private void txtUpdateCustomerNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUpdateCustomerNumberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUpdateCustomerNumberActionPerformed
+
+    private void txtUpdateSurnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUpdateSurnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUpdateSurnameActionPerformed
+
+    private void txtUpdateNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUpdateNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUpdateNameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2234,7 +2891,9 @@ public class MovieRental extends javax.swing.JFrame {
     private javax.swing.JPanel btnRentDvd;
     private javax.swing.JPanel btnReport;
     private javax.swing.JPanel btnReturnDvd;
+    private javax.swing.JButton btnReturnMovie;
     private javax.swing.JPanel btnSearch;
+    private javax.swing.JButton btnUpdateCustomerCredit;
     private javax.swing.JComboBox<String> cmbAvailableForRental;
     private javax.swing.JComboBox<String> cmbCanRent;
     private javax.swing.JComboBox<String> cmbCategory;
@@ -2242,10 +2901,12 @@ public class MovieRental extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbDailyRental;
     private javax.swing.JComboBox<String> cmbNewRelease;
     private javax.swing.JComboBox<String> cmbSelectCustomer;
+    private javax.swing.JComboBox<String> cmbSelectRentalNumber;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
@@ -2268,7 +2929,6 @@ public class MovieRental extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
@@ -2277,11 +2937,27 @@ public class MovieRental extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -2303,8 +2979,21 @@ public class MovieRental extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator15;
     private javax.swing.JSeparator jSeparator16;
     private javax.swing.JSeparator jSeparator17;
+    private javax.swing.JSeparator jSeparator18;
     private javax.swing.JSeparator jSeparator19;
     private javax.swing.JSeparator jSeparator20;
+    private javax.swing.JSeparator jSeparator21;
+    private javax.swing.JSeparator jSeparator22;
+    private javax.swing.JSeparator jSeparator23;
+    private javax.swing.JSeparator jSeparator24;
+    private javax.swing.JSeparator jSeparator25;
+    private javax.swing.JSeparator jSeparator26;
+    private javax.swing.JSeparator jSeparator27;
+    private javax.swing.JSeparator jSeparator33;
+    private javax.swing.JSeparator jSeparator34;
+    private javax.swing.JSeparator jSeparator35;
+    private javax.swing.JSeparator jSeparator36;
+    private javax.swing.JSeparator jSeparator37;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
@@ -2335,6 +3024,7 @@ public class MovieRental extends javax.swing.JFrame {
     private javax.swing.JPanel pnlReturnDvd;
     private javax.swing.JPanel pnlSearch;
     private javax.swing.JPanel pnlTop;
+    private javax.swing.JPanel pnlUpdateCustomerCredit;
     private javax.swing.JTable tblChooseMovieToRent;
     private javax.swing.JTable tblDisplayAllCustomers;
     private javax.swing.JTable tblDisplayAllMovies;
@@ -2355,7 +3045,20 @@ public class MovieRental extends javax.swing.JFrame {
     private javax.swing.JTextField txtPhoneNumber;
     private javax.swing.JTextField txtPrice;
     private javax.swing.JTextField txtPriceAddition;
+    private javax.swing.JTextField txtRentedMovie;
+    private javax.swing.JTextField txtRentedMovieCategory;
+    private javax.swing.JTextField txtRentedReturnDate;
+    private javax.swing.JTextField txtReturnCustomerAvailableBalance;
+    private javax.swing.JTextField txtReturnCustomerName;
+    private javax.swing.JTextField txtReturnCustomerSurname;
+    private javax.swing.JTextField txtReturnDate;
+    private javax.swing.JTextField txtReturnFee;
     private javax.swing.JTextField txtSurname;
     private javax.swing.JTextField txtTitle;
+    private javax.swing.JTextField txtUpdateCredit;
+    private javax.swing.JTextField txtUpdateCustomerNumber;
+    private javax.swing.JTextField txtUpdateName;
+    private javax.swing.JTextField txtUpdatePhoneNumber;
+    private javax.swing.JTextField txtUpdateSurname;
     // End of variables declaration//GEN-END:variables
 }
