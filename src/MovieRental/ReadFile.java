@@ -5,6 +5,7 @@
  */
 package MovieRental;
 
+import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -75,10 +76,18 @@ public class ReadFile {
     }
     
     //read data into array lists
-    public void readData(){        
+    public void readCustomerData(){
+        try{
+            while(true){
+                
+            }
+        }catch(EOFException)
     }
     
     public static void main(String[]args){
         ReadFile rf = new ReadFile();
+        rf.openFile();
+        rf.readCustomerData();
+        rf.closeFile();
     }
 }
