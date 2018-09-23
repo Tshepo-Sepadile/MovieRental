@@ -21,12 +21,18 @@ public class Customer implements Serializable
     
     public Customer(int custNumber, String fName, String lName, String phone, double credAmt, boolean can)
     {
-        setCustNumber(custNumber);
-        setName(fName);
-        setSurname(lName);
-        setPhoneNum(phone);
-        setCredit(credAmt);
-        setCanRent(can);
+        this.custNumber = custNumber;
+        this.firstName = fName;
+        this.surname = lName;
+        this.phoneNum = phone;
+        this.credit = credAmt;
+        this.canRent = can;
+//        setCustNumber(custNumber);
+//        setName(fName);
+//        setSurname(lName);
+//        setPhoneNum(phone);
+//        setCredit(credAmt);
+//        setCanRent(can);
     }
     
     public void setCustNumber(int custNumber)  {
