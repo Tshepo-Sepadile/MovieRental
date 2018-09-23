@@ -27,9 +27,9 @@ public class ReadFile{
     public FileInputStream fileInputStreamCustomer;
     public FileInputStream fileInputStreamMovies;
     public FileInputStream fileInputStreamRental;
-    public Scanner scannerCustomer;
-    public Scanner scannerMovies;
-    public Scanner scannerRental;
+//    public Scanner scannerCustomer;
+//    public Scanner scannerMovies;
+//    public Scanner scannerRental;
     Customer customer;
     Rental rental;
     DVD dvd;
@@ -71,9 +71,9 @@ public class ReadFile{
             objectInputStreamCustomer.close();
             objectInputStreamMovies.close();
             objectInputStreamRental.close();
-            scannerCustomer.close();
-            scannerMovies.close();
-            scannerRental.close();
+//            scannerCustomer.close();
+//            scannerMovies.close();
+//            scannerRental.close();
             System.out.println("Files closed!");
         } catch (IOException error) {
             JOptionPane.showMessageDialog(null, error.getMessage(), "Exception", JOptionPane.ERROR_MESSAGE);
