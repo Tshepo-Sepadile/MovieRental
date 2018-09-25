@@ -5,40 +5,43 @@
  */
 package MovieRental;
 
-import java.io.EOFException;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.io.*;
+import java.util.*;
+import java.util.logging.*;
 import javax.swing.JOptionPane;
 
 /**
- *
+ * @author Tshepo Sepadile
  * @author Banele Mlamleli
  */
 public class ReadFile{
 
-    public ObjectInputStream objectInputStreamCustomer;
-    public ObjectInputStream objectInputStreamMovies;
-    public ObjectInputStream objectInputStreamRental;
-    public FileInputStream fileInputStreamCustomer;
-    public FileInputStream fileInputStreamMovies;
-    public FileInputStream fileInputStreamRental;
-//    public Scanner scannerCustomer;
-//    public Scanner scannerMovies;
-//    public Scanner scannerRental;
+    private ObjectInputStream objectInputStreamCustomer;
+    private ObjectInputStream objectInputStreamMovies;
+    private ObjectInputStream objectInputStreamRental;
+    
+    private ObjectOutputStream objOutputStreamCustomer;
+    private ObjectOutputStream objOutputStreamMovies;
+    private ObjectOutputStream objOutputStreamRental;
+    
+    private FileOutputStream fileOutputStreamCustomers;
+    private FileOutputStream fileOutputStreamMovies;
+    private FileOutputStream fileOutputStreamRental;
+    
+    private FileInputStream fileInputStreamCustomer;
+    private FileInputStream fileInputStreamMovies;
+    private FileInputStream fileInputStreamRental;
+    
     Customer customer;
     Rental rental;
     DVD dvd;
     
-    ArrayList<Customer> custArrayList = new ArrayList<>();
-    ArrayList<DVD> dvdArrayList = new ArrayList<>();
-    ArrayList<Rental> rentalArrayList = new ArrayList<>();
-
-    //Opening files for reading
+    //Arraylist to populate with data from the serialized object file
+    public static ArrayList<Customer> customerArraylist = new ArrayList<>();
+    public static ArrayList<DVD> dvdArraylist = new ArrayList<>();
+    public static ArrayList<Rental> rentalArraylist = new ArrayList<>();
+    
+    //Opening serialized files for reading
     public void openFile() {
         try {
             //Customer data
@@ -52,11 +55,9 @@ public class ReadFile{
             //scannerMovies = new Scanner(objectInputStreamMovies);
             
             //Rental data
-            fileInputStreamRental = new FileInputStream("/home/shaun/Documents/PROGRAMMING/Java/Projects/MovieRental/src/Assets/Rental.ser");
-            objectInputStreamRental = new ObjectInputStream(fileInputStreamRental);
+            //fileInputStreamRental = new FileInputStream("/home/shaun/Documents/PROGRAMMING/Java/Projects/MovieRental/src/Assets/Rental.ser");
+            //objectInputStreamRental = new ObjectInputStream(fileInputStreamRental);
             
-            //scannerRental = new Scanner(objectInputStreamRental);
-            System.out.println("Files successfully read!");
         } catch (IOException error) {
             JOptionPane.showMessageDialog(null, error.getMessage(), "Exception", JOptionPane.ERROR_MESSAGE);
         }
@@ -66,40 +67,64 @@ public class ReadFile{
     public void closeFile() {
         try {
             fileInputStreamCustomer.close();
-            fileInputStreamMovies.close();
-            fileInputStreamRental.close();
             objectInputStreamCustomer.close();
             objectInputStreamMovies.close();
-            objectInputStreamRental.close();
-//            scannerCustomer.close();
-//            scannerMovies.close();
-//            scannerRental.close();
-            System.out.println("Files closed!");
+            fileInputStreamMovies.close();
+            //fileInputStreamRental.close();            
+            //objectInputStreamRental.close();
         } catch (IOException error) {
             JOptionPane.showMessageDialog(null, error.getMessage(), "Exception", JOptionPane.ERROR_MESSAGE);
         }
     }
     
     //read data into array lists
-    public void readData(){
+    public void readCustomerSerializedData(){
+        openFile();
         try{
+            //reading data from Customer.ser file
             while(true){
-                //customer = (Customer) objectInputStreamCustomer.readObject();
-                //dvd = (DVD) objectInputStreamMovies.readObject();
-                rental = (Rental) objectInputStreamRental.readObject();
-                System.out.println(rental.toString());
+                customer = (Customer) objectInputStreamCustomer.readObject();
+                customerArraylist.add(customer);
             }
         }catch(EOFException eofe){
-            System.out.println(eofe.fillInStackTrace());
+            System.out.println("customer end-of-file reached");
         } catch (ClassNotFoundException | IOException ex) {
             Logger.getLogger(ReadFile.class.getName()).log(Level.SEVERE, null, ex);
         }
+        closeFile();
     }
     
-    public static void main(String[]args) throws IOException{
-        ReadFile rf = new ReadFile();
-        rf.openFile();
-        rf.readData();
-        rf.closeFile();
+    //read data into Dvd array lists
+    public void readDvdSerializedData(){
+        openFile();
+        try{
+            //reading data from Movies.ser file
+            while(true){
+                dvd = (DVD) objectInputStreamMovies.readObject();
+                dvdArraylist.add(dvd);
+            }
+        }catch(EOFException eofe){
+            System.out.println("Dvd end-of-file reached");
+        } catch (ClassNotFoundException | IOException ex) {
+            Logger.getLogger(ReadFile.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        closeFile();
+    }
+    
+        //read data into array lists
+    public void readRentalSerializedData(){
+        openFile();
+        try{
+            //reading data from Rental.ser file
+            while(true){
+                rental = (Rental) objectInputStreamRental.readObject();
+                rentalArraylist.add(rental);
+            }
+        }catch(EOFException eofe){
+            System.out.println("Rental end-of-file reached");
+        } catch (ClassNotFoundException | IOException ex) {
+            Logger.getLogger(ReadFile.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        closeFile();
     }
 }
