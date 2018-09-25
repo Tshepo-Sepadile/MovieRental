@@ -1141,7 +1141,7 @@
                                               <Component id="jSeparator9" max="32767" attributes="0"/>
                                               <Component id="txtPrice" min="-2" pref="100" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="33" max="32767" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Component id="jLabel51" min="-2" max="-2" attributes="0"/>
@@ -1351,13 +1351,13 @@
                     </Property>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="7">
-                        <StringItem index="0" value="Horror"/>
-                        <StringItem index="1" value="Sci-fi"/>
-                        <StringItem index="2" value="Drama"/>
-                        <StringItem index="3" value="Romance"/>
-                        <StringItem index="4" value="Comedy"/>
-                        <StringItem index="5" value="Action"/>
-                        <StringItem index="6" value="Cartoon"/>
+                        <StringItem index="0" value="1. Horror"/>
+                        <StringItem index="1" value="2. Sci-fi"/>
+                        <StringItem index="2" value="3. Drama"/>
+                        <StringItem index="3" value="4. Romance"/>
+                        <StringItem index="4" value="5. Comedy"/>
+                        <StringItem index="5" value="6. Action"/>
+                        <StringItem index="6" value="7. Cartoon"/>
                       </StringArray>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1483,7 +1483,6 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="fe" green="6e" red="2e" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="5.00"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
@@ -2065,7 +2064,7 @@
                                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">

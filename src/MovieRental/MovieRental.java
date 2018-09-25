@@ -828,7 +828,7 @@ public class MovieRental extends javax.swing.JFrame {
         });
 
         cmbCategory.setFont(new java.awt.Font("Cooper Black", 0, 14)); // NOI18N
-        cmbCategory.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Horror", "Sci-fi", "Drama", "Romance", "Comedy", "Action", "Cartoon" }));
+        cmbCategory.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1. Horror", "2. Sci-fi", "3. Drama", "4. Romance", "5. Comedy", "6. Action", "7. Cartoon" }));
         cmbCategory.setBorder(null);
         cmbCategory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -881,7 +881,6 @@ public class MovieRental extends javax.swing.JFrame {
         txtPriceAddition.setBackground(new java.awt.Color(204, 255, 255));
         txtPriceAddition.setFont(new java.awt.Font("Cooper Black", 0, 16)); // NOI18N
         txtPriceAddition.setForeground(new java.awt.Color(46, 110, 254));
-        txtPriceAddition.setText("5.00");
         txtPriceAddition.setBorder(null);
         txtPriceAddition.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -942,7 +941,7 @@ public class MovieRental extends javax.swing.JFrame {
                                 .addGroup(pnlAddNewDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jSeparator9)
                                     .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addComponent(jLabel51)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel45)
@@ -1490,7 +1489,7 @@ public class MovieRental extends javax.swing.JFrame {
                                 .addComponent(txtReturnCustomerAvailableBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(21, 21, 21))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlReturnDvdLayout.createSequentialGroup()
-                        .addGap(0, 10, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlReturnDvdLayout.createSequentialGroup()
                                 .addGroup(pnlReturnDvdLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1917,7 +1916,7 @@ public class MovieRental extends javax.swing.JFrame {
                             .addComponent(jSeparator16)
                             .addComponent(txtName2, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(79, 79, 79)
-                        .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
+                        .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 173, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel27)
                         .addGap(11, 11, 11)
@@ -2553,7 +2552,20 @@ public class MovieRental extends javax.swing.JFrame {
     }//GEN-LAST:event_cmbAvailableForRentalActionPerformed
 
     private void btnAddDvdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddDvdActionPerformed
-        // TODO add your handling code here:
+        // Add dvd into the database
+        String title = txtTitle.getText();
+        String catgry = cmbCategory.getSelectedItem().toString();
+        int category = Integer.parseInt(catgry);
+        double price = Double.parseDouble(txtPrice.getText()) + Double.parseDouble(txtPriceAddition.getText());
+        boolean newRelease = Boolean.parseBoolean(cmbNewRelease.getSelectedItem().toString());
+        boolean availableForRental = Boolean.parseBoolean(cmbAvailableForRental.getSelectedItem().toString());
+        
+        
+        if(title.length() != 0){
+            
+        }else{
+            JOptionPane.showMessageDialog(rootPane,"Movie title cannot beempty!", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_btnAddDvdActionPerformed
 
     private void btnLoadAllRentalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadAllRentalActionPerformed
@@ -2624,8 +2636,37 @@ public class MovieRental extends javax.swing.JFrame {
     }//GEN-LAST:event_cmbCanRentActionPerformed
 
     private void btnAddCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddCustomerActionPerformed
-        //Adding customer into the arraylist
-
+        //Adding customer into the database
+        
+        String name = txtName.getText();
+        String surname = txtSurname.getText();
+        String phoneNum = txtPhoneNumber.getText();
+        boolean canRent = Boolean.parseBoolean(cmbCanRent.getSelectedItem().toString());
+        String customerNumber = txtCustomerNumber.getText();
+        double credit = Double.parseDouble(txtCredit.getText());
+        
+        if(name.length() != 0){
+            if(surname.length() != 0){
+                if(phoneNum.length() == 10){
+                    try{
+                        int phoneNumber = Integer.parseInt(phoneNum);
+                    }catch(NumberFormatException error){
+                        JOptionPane.showMessageDialog(rootPane,"Phone number must be precisely 10 digits", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                    
+                    //code to call the method to add new customer into the database
+                    
+                }else{
+                    JOptionPane.showMessageDialog(rootPane,"Phone number is incorrect!", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }else{
+                JOptionPane.showMessageDialog(rootPane, "Surname field cannot be left empty!", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }else{
+            JOptionPane.showMessageDialog(rootPane, "Name field cannot be left empty!", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        
+        //clearing the fields
         txtName.setText("");
         txtSurname.setText("");
         txtPhoneNumber.setText("");
