@@ -9,6 +9,7 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -175,7 +176,7 @@ public class MovieRental extends javax.swing.JFrame {
         pnlListAllMovies = new javax.swing.JPanel();
         jScrollPane12 = new javax.swing.JScrollPane();
         tblDisplayAllMovies = new javax.swing.JTable();
-        btnLoadAllCustomers1 = new javax.swing.JButton();
+        btnLoadAllMovies = new javax.swing.JButton();
         pnlListAllCustomers = new javax.swing.JPanel();
         jScrollPane11 = new javax.swing.JScrollPane();
         tblDisplayAllCustomers = new javax.swing.JTable();
@@ -1630,12 +1631,12 @@ public class MovieRental extends javax.swing.JFrame {
         tblDisplayAllMovies.setSelectionBackground(new java.awt.Color(46, 110, 254));
         jScrollPane12.setViewportView(tblDisplayAllMovies);
 
-        btnLoadAllCustomers1.setFont(new java.awt.Font("Cooper Black", 0, 24)); // NOI18N
-        btnLoadAllCustomers1.setForeground(new java.awt.Color(0, 102, 102));
-        btnLoadAllCustomers1.setText("Load all movies");
-        btnLoadAllCustomers1.addActionListener(new java.awt.event.ActionListener() {
+        btnLoadAllMovies.setFont(new java.awt.Font("Cooper Black", 0, 24)); // NOI18N
+        btnLoadAllMovies.setForeground(new java.awt.Color(0, 102, 102));
+        btnLoadAllMovies.setText("Load all movies");
+        btnLoadAllMovies.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLoadAllCustomers1ActionPerformed(evt);
+                btnLoadAllMoviesActionPerformed(evt);
             }
         });
 
@@ -1649,7 +1650,7 @@ public class MovieRental extends javax.swing.JFrame {
                     .addContainerGap()
                     .addGroup(pnlListAllMoviesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jScrollPane12, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
-                        .addComponent(btnLoadAllCustomers1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnLoadAllMovies, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addContainerGap()))
         );
         pnlListAllMoviesLayout.setVerticalGroup(
@@ -1658,7 +1659,7 @@ public class MovieRental extends javax.swing.JFrame {
             .addGroup(pnlListAllMoviesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnlListAllMoviesLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(btnLoadAllCustomers1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLoadAllMovies, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                     .addComponent(jScrollPane12, javax.swing.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE)
                     .addContainerGap()))
@@ -2554,17 +2555,14 @@ public class MovieRental extends javax.swing.JFrame {
     private void btnAddDvdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddDvdActionPerformed
         // Add dvd into the database
         String title = txtTitle.getText();
-        String catgry = cmbCategory.getSelectedItem().toString();
-        int category = Integer.parseInt(catgry);
+        int category = Integer.parseInt(cmbCategory.getSelectedItem().toString().charAt(0)+"");
         double price = Double.parseDouble(txtPrice.getText()) + Double.parseDouble(txtPriceAddition.getText());
         boolean newRelease = Boolean.parseBoolean(cmbNewRelease.getSelectedItem().toString());
         boolean availableForRental = Boolean.parseBoolean(cmbAvailableForRental.getSelectedItem().toString());
         
-        
         if(title.length() != 0){
-            
         }else{
-            JOptionPane.showMessageDialog(rootPane,"Movie title cannot beempty!", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(rootPane,"Movie title cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnAddDvdActionPerformed
 
@@ -2611,9 +2609,19 @@ public class MovieRental extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLoadAllCustomersActionPerformed
 
-    private void btnLoadAllCustomers1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadAllCustomers1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnLoadAllCustomers1ActionPerformed
+    private void btnLoadAllMoviesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadAllMoviesActionPerformed
+        //Load all movies
+        DefaultTableModel model = (DefaultTableModel)tblDisplayAllMovies.getModel();
+        
+        /* The below code will clear the table everytime the button is clicked again.
+         * This will help to remove displaying the same thing on the table */        
+        model.getDataVector().removeAllElements();
+        model.fireTableDataChanged();
+
+        //Populating the table to display all the movies
+//        model.addRow(new Object[]{dvd.get(i).getTitle(), dvd.get(i).getCategory(),
+//            dvd.get(i).isNewRelease(), dvd.get(i).getPrice(), dvd.get(i).isAvailableForRental()});        
+    }//GEN-LAST:event_btnLoadAllMoviesActionPerformed
 
     private void txtPhoneNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPhoneNumberActionPerformed
         // TODO add your handling code here:
@@ -2677,7 +2685,8 @@ public class MovieRental extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCreditActionPerformed
 
     private void cmbSelectCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbSelectCustomerActionPerformed
-        // TODO add your handling code here:
+        //Selecting a customer to rent a movie
+        String customer = cmbSelectCustomer.getSelectedItem().toString();
     }//GEN-LAST:event_cmbSelectCustomerActionPerformed
 
     private void txtCustomerNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCustomerNameActionPerformed
@@ -2697,7 +2706,8 @@ public class MovieRental extends javax.swing.JFrame {
     }//GEN-LAST:event_cmbChooseMovieCategoryActionPerformed
 
     private void btnRentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRentActionPerformed
-        // TODO add your handling code here:
+        // Renting a movie
+        
 //        if(/*successful rental*/){
 //            JOptionPane.showMessageDialog(rootPane, "Name: Xxxxxxxx\n" +
 //                    "Category: Xxxxxxx\n" + "Movie title: Xxxxxx\n" +
@@ -2923,7 +2933,7 @@ public class MovieRental extends javax.swing.JFrame {
     private javax.swing.JPanel btnListAllCustomers;
     private javax.swing.JPanel btnListAllMovies;
     private javax.swing.JButton btnLoadAllCustomers;
-    private javax.swing.JButton btnLoadAllCustomers1;
+    private javax.swing.JButton btnLoadAllMovies;
     private javax.swing.JButton btnLoadAllRental;
     private javax.swing.JButton btnLoadAllRental1;
     private javax.swing.JButton btnLoadAllRental2;
