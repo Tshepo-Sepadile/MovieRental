@@ -1,7 +1,7 @@
 package MovieRental;
 /**
  * @Author  Banele Mlamleli - 213058553
- * @Author  Tshepo
+ * @Author  Tshepo Sepadile - 217029175
  */
 
 import java.io.*;
