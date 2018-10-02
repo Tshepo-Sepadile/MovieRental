@@ -6,9 +6,10 @@ package MovieRental;
  * and open the template in the editor.
  */
 
+
 /**
- *
- * @author Tshepo95
+ * @author Tshepo Sepadile
+ * @author Banele Mlamleli
  */
 import java.sql.*;
 
