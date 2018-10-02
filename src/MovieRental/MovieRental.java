@@ -2554,15 +2554,19 @@ public class MovieRental extends javax.swing.JFrame {
 
     private void btnAddDvdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddDvdActionPerformed
         // Add dvd into the database
-        String title = txtTitle.getText();
-        int category = Integer.parseInt(cmbCategory.getSelectedItem().toString().charAt(0)+"");
-        double price = Double.parseDouble(txtPrice.getText()) + Double.parseDouble(txtPriceAddition.getText());
-        boolean newRelease = Boolean.parseBoolean(cmbNewRelease.getSelectedItem().toString());
-        boolean availableForRental = Boolean.parseBoolean(cmbAvailableForRental.getSelectedItem().toString());
-        
-        if(title.length() != 0){
-        }else{
-            JOptionPane.showMessageDialog(rootPane,"Movie title cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
+        try {
+            String title = txtTitle.getText();
+            int category = Integer.parseInt(cmbCategory.getSelectedItem().toString().charAt(0) + "");
+            double price = Double.parseDouble(txtPrice.getText()) + Double.parseDouble(txtPriceAddition.getText());
+            boolean newRelease = Boolean.parseBoolean(cmbNewRelease.getSelectedItem().toString());
+            boolean availableForRental = Boolean.parseBoolean(cmbAvailableForRental.getSelectedItem().toString());
+
+            if (title.length() != 0) {
+            } else {
+                JOptionPane.showMessageDialog(rootPane, "Movie title cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (NumberFormatException nfe) {
+            JOptionPane.showMessageDialog(rootPane, nfe.getMessage(),"Error!",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnAddDvdActionPerformed
 
